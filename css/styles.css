@@ -55,7 +55,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 110px;
   transition: box-shadow 0.3s;
 }
 nav.scrolled {
@@ -64,15 +64,32 @@ nav.scrolled {
 
 .nav-logo {
   font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--walnut);
   text-decoration: none;
   letter-spacing: -0.3px;
   transition: opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  line-height: 1;
 }
 .nav-logo:hover {
   opacity: 0.8;
+}
+
+.nav-logo span {
+  display: block;
+  margin-left: -1.05rem;
+}
+
+.nav-logo-img {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -130,7 +147,7 @@ nav.scrolled {
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 68px;
+  top: 80px;
   left: 0;
   right: 0;
   background: var(--cream);
@@ -159,7 +176,7 @@ nav.scrolled {
 /* ── HERO ── */
 #hero {
   min-height: 100vh;
-  padding: 120px 5% 80px;
+  padding: 135px 5% 80px;
   display: flex;
   align-items: center;
   background: var(--cream);
@@ -873,15 +890,22 @@ footer {
 }
 
 @media (max-width: 540px) {
+  .nav-logo-img {
+    width: 70px;
+    height: 70px;
+  }
   nav {
-    height: 60px;
+    height: 90px;
   }
   .mobile-menu {
-    top: 60px;
+    top: 90px;
     padding: 1.2rem 6%;
   }
   .nav-logo {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+  }
+  .nav-logo span {
+    margin-left: -0.85rem;
   }
   section {
     padding: 60px 5%;
